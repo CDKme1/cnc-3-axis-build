@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">Câblage fonctionnel des axes de la CNC</title>
+  <desc id="desc">Carte ESP32 et FluidNC reliée à trois drivers TB6600, trois moteurs NEMA 23 et trois fins de course, avec alimentation 24 volts séparée.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1"><stop stop-color="#101820"/><stop offset="1" stop-color="#151f29"/></linearGradient>
+    <style>
+      .box{fill:#111920;stroke:#355058;stroke-width:2}.head{fill:#45e6bd;font:700 19px system-ui}.txt{fill:#d9e7e2;font:16px system-ui}.muted{fill:#8fa39d;font:14px system-ui}.sig{fill:none;stroke:#78b7ff;stroke-width:4}.power{fill:none;stroke:#ff8c67;stroke-width:5}.sensor{fill:none;stroke:#45e6bd;stroke-width:4;stroke-dasharray:9 7}.node{fill:#0c1217;stroke:#45e6bd;stroke-width:2}
+    </style>
+  </defs>
+  <rect width="1400" height="760" rx="24" fill="url(#bg)"/>
+  <text x="70" y="62" class="head">Câblage fonctionnel — trois axes</text>
+  <text x="70" y="89" class="muted">Les signaux de commande, la puissance moteur et les capteurs suivent des chemins distincts.</text>
+  <rect class="box" x="70" y="235" width="250" height="190" rx="16"/><text class="head" x="100" y="280">Carte CNC 32 bits</text><text class="txt" x="100" y="315">ESP32 · FluidNC</text><text class="muted" x="100" y="355">STEP / DIR / ENABLE</text><text class="muted" x="100" y="382">Entrées X / Y / Z</text>
+  <rect class="box" x="70" y="545" width="250" height="105" rx="16"/><text class="head" x="100" y="585">Alimentation 24 V</text><text class="muted" x="100" y="615">Distribution parallèle</text>
+  <g transform="translate(460 130)"><rect class="box" width="270" height="120" rx="15"/><text class="head" x="28" y="42">Driver TB6600 · X</text><text class="muted" x="28" y="76">Commande → puissance</text><rect class="box" x="430" width="250" height="120" rx="15"/><text class="head" x="458" y="42">Moteur X</text><text class="txt" x="458" y="76">NEMA 23</text></g>
+  <g transform="translate(460 315)"><rect class="box" width="270" height="120" rx="15"/><text class="head" x="28" y="42">Driver TB6600 · Y</text><text class="muted" x="28" y="76">Commande → puissance</text><rect class="box" x="430" width="250" height="120" rx="15"/><text class="head" x="458" y="42">Moteur Y</text><text class="txt" x="458" y="76">NEMA 23</text></g>
+  <g transform="translate(460 500)"><rect class="box" width="270" height="120" rx="15"/><text class="head" x="28" y="42">Driver TB6600 · Z</text><text class="muted" x="28" y="76">Commande → puissance</text><rect class="box" x="430" width="250" height="120" rx="15"/><text class="head" x="458" y="42">Moteur Z</text><text class="txt" x="458" y="76">NEMA 23</text></g>
+  <path class="sig" d="M320 285H400V190H460M320 330H410V375H460M320 375H400V560H460"/>
+  <path class="power" d="M320 595H385V220H460M385 405H460M385 590H460"/>
+  <path class="sig" d="M730 190H890M730 375H890M730 560H890"/>
+  <g><rect class="node" x="1190" y="140" width="150" height="70" rx="12"/><text class="txt" x="1220" y="183">Fin de course X</text><rect class="node" x="1190" y="325" width="150" height="70" rx="12"/><text class="txt" x="1220" y="368">Fin de course Y</text><rect class="node" x="1190" y="510" width="150" height="70" rx="12"/><text class="txt" x="1220" y="553">Fin de course Z</text></g>
+  <path class="sensor" d="M1190 175H1145V105H370V400H320M1190 360H1125V105M1190 545H1105V105"/>
+  <g transform="translate(70 700)"><line class="sig" x2="55"/><text class="muted" x="68" y="5">STEP / DIR</text><line class="power" x1="230" x2="285"/><text class="muted" x="298" y="5">24 V moteurs</text><line class="sensor" x1="470" x2="525"/><text class="muted" x="538" y="5">Fins de course</text></g>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Architecture fonctionnelle de la commande CNC</title>
+  <desc id="desc">Le secteur alimente une chaîne de puissance 24 volts vers trois drivers et trois moteurs, ainsi qu'une alimentation 5 volts pour la carte de commande. La carte reçoit les fins de course et pilote les drivers et la broche.</desc>
+  <defs>
+    <style>
+      .bg{fill:#111821}.box{fill:#192330;stroke:#41546b;stroke-width:2}.power{fill:#2a211b;stroke:#d68a50}.control{fill:#17282a;stroke:#4da19b}.motor{fill:#202331;stroke:#777fc0}.t{fill:#f1f4f7;font:600 22px system-ui,sans-serif}.s{fill:#aeb9c6;font:16px system-ui,sans-serif}.k{fill:#dd8c54;font:700 14px system-ui,sans-serif;letter-spacing:1.5px}.line{fill:none;stroke:#8696a8;stroke-width:3}.p{stroke:#dd8c54}.c{stroke:#56a9a3}.dot{fill:#111821;stroke-width:3}.arrow{fill:#8696a8}.note{fill:#8290a0;font:14px system-ui,sans-serif}
+    </style>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" class="arrow"/></marker>
+    <marker id="arrp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#dd8c54"/></marker>
+    <marker id="arrc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#56a9a3"/></marker>
+  </defs>
+  <rect width="1200" height="620" rx="28" class="bg"/>
+  <text x="60" y="55" class="k">SCHÉMA FONCTIONNEL · ARCHITECTURE DE COMMANDE</text>
+
+  <rect x="55" y="105" width="190" height="95" rx="15" class="box power"/>
+  <text x="80" y="143" class="t">Secteur 230 V</text><text x="80" y="172" class="s">coupure · protection</text>
+  <rect x="320" y="85" width="205" height="105" rx="15" class="box power"/>
+  <text x="345" y="126" class="t">Alimentation 24 V</text><text x="345" y="156" class="s">puissance des axes</text>
+  <rect x="320" y="225" width="205" height="105" rx="15" class="box control"/>
+  <text x="345" y="266" class="t">Alimentation 5 V</text><text x="345" y="296" class="s">carte de commande</text>
+
+  <rect x="600" y="210" width="245" height="125" rx="15" class="box control"/>
+  <text x="625" y="252" class="t">Commande CNC</text><text x="625" y="282" class="s">ESP32 · FluidNC</text><text x="625" y="307" class="s">signaux STEP / DIR</text>
+  <rect x="600" y="405" width="245" height="95" rx="15" class="box"/>
+  <text x="625" y="444" class="t">Fins de course</text><text x="625" y="474" class="s">X · Y · Z</text>
+
+  <rect x="925" y="70" width="220" height="205" rx="15" class="box motor"/>
+  <text x="950" y="110" class="t">3 drivers externes</text><text x="950" y="140" class="s">un canal par axe</text>
+  <line x1="950" y1="168" x2="1120" y2="168" class="line"/>
+  <text x="950" y="202" class="t">3 moteurs</text><text x="950" y="232" class="s">NEMA 23 · X / Y / Z</text>
+  <rect x="925" y="350" width="220" height="125" rx="15" class="box power"/>
+  <text x="950" y="391" class="t">Commande broche</text><text x="950" y="421" class="s">relais ou 0–10 V</text><text x="950" y="447" class="s">selon le variateur</text>
+
+  <path d="M245 135H320" class="line p" marker-end="url(#arrp)"/>
+  <path d="M245 170H280V278H320" class="line p" marker-end="url(#arrp)"/>
+  <path d="M525 278H600" class="line c" marker-end="url(#arrc)"/>
+  <path d="M525 135H875V130H925" class="line p" marker-end="url(#arrp)"/>
+  <path d="M845 248H925" class="line c" marker-end="url(#arrc)"/>
+  <path d="M722 405V335" class="line c" marker-end="url(#arrc)"/>
+  <path d="M845 298H885V412H925" class="line c" marker-end="url(#arrc)"/>
+  <circle cx="280" cy="170" r="6" class="dot p"/><circle cx="875" cy="135" r="6" class="dot p"/>
+
+  <text x="60" y="570" class="note">Lecture simplifiée du système : la puissance et les signaux de commande sont volontairement séparés.</text>
+  <text x="60" y="594" class="note">Ce synoptique documente le principe ; le repérage, les protections et les sections de câbles restent à valider sur le montage réel.</text>
+</svg>

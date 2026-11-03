@@ -8,6 +8,36 @@ Construction d’une fraiseuse numérique avec mon frère, depuis la fabrication
 
 L’objectif est d’obtenir une machine trois axes suffisamment rigide et réglable pour apprendre l’usinage numérique et fabriquer des pièces de projet. La construction a été divisée en sous-ensembles afin de pouvoir vérifier séparément la structure, les mouvements, la commande et la puissance.
 
+## Cheminement de la construction
+
+### 1. Fabriquer une structure réglable
+
+Les montants ont été assemblés à partir de profilés et de pièces mécano-soudées. Les perçages multiples permettent de positionner les sous-ensembles puis de corriger leur alignement avant le serrage définitif.
+
+![Montants mécano-soudés pendant la préparation](assets/cnc-montants.webp)
+
+### 2. Installer les guidages et les entraînements
+
+Chaque axe associe des guidages linéaires et une vis d’entraînement. Le montage a été réalisé progressivement afin de contrôler la liberté de mouvement, le parallélisme et l’absence de point dur avant d’ajouter les moteurs.
+
+![Vis d’entraînement et guidages linéaires](assets/cnc-vis-entrainement.webp)
+
+La platine imprimée visible pendant le montage a servi de gabarit de positionnement. Elle a permis de comparer plusieurs entraxes avant de figer la disposition mécanique.
+
+![Platine de positionnement pendant l’assemblage](assets/cnc-platine.webp)
+
+### 3. Monter l’axe de broche
+
+L’axe vertical réunit le guidage Z, la vis, la motorisation et le support de broche. Cette étape concentre les contraintes de rigidité et d’alignement : un défaut se répercute directement sur la profondeur et la géométrie de l’usinage.
+
+![Broche et axe vertical intégrés](assets/cnc-broche.webp)
+
+### 4. Regrouper la commande dans un coffret
+
+Le coffret sépare autant que possible la logique, la puissance des moteurs et la commande de broche. Les trois connecteurs de façade correspondent aux axes ; l’interrupteur général, la ventilation et le passage des câbles restent accessibles pour la maintenance.
+
+![Coffret de commande vu de l’extérieur](assets/cnc-coffret-exterieur.webp)
+
 ## 1. Architecture de commande
 
 La carte 32 bits équipée d’un ESP32 exécute FluidNC. Elle interprète le G-code et produit, pour chaque axe, deux signaux principaux :

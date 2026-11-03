@@ -2,7 +2,7 @@
 
 Construction d’une fraiseuse numérique avec mon frère, depuis la fabrication du châssis mécano-soudé jusqu’à l’intégration du coffret de commande. Ce dépôt documente le cheminement du projet, les choix retenus et les contrôles nécessaires avant les premiers usinages.
 
-![CNC assemblée](https://paul-n7-3ea-portfolio.cdkme.chatgpt.site/assets/cnc/cnc-assemblee.webp)
+![CNC assemblée](assets/cnc-assemblee.webp)
 
 ## Objectif du projet
 
@@ -51,7 +51,7 @@ La puissance de la broche reste sur une chaîne séparée et est commutée par u
 | Arrêt d’urgence et reset | 1 de chaque | Coupure et reprise après défaut | Action réelle sur la chaîne d’énergie |
 | Relais externe de broche | 1 | Marche/arrêt de la broche | Isolement commande/puissance |
 
-![Coffret de commande](https://paul-n7-3ea-portfolio.cdkme.chatgpt.site/assets/cnc/cnc-coffret.webp)
+![Coffret de commande](assets/cnc-coffret.webp)
 
 ## 3. Câblage des moteurs et fins de course
 
@@ -113,7 +113,7 @@ La validation suit un ordre volontairement progressif :
 - coffret et chaîne de puissance en cours de finalisation ;
 - repérage définitif, mesures de répétabilité et premier usinage encore à documenter.
 
-Le dossier visuel complet est disponible sur [la page CNC du portfolio](https://paul-n7-3ea-portfolio.cdkme.chatgpt.site/cnc).
+Le dossier visuel complet est disponible sur [la page CNC du portfolio](https://paul-n7-3ea-eportfolio.vercel.app/cnc.html).
 
 ## Documentation consultée
 

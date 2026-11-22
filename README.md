@@ -38,6 +38,12 @@ Le coffret sépare autant que possible la logique, la puissance des moteurs et l
 
 ![Coffret de commande vu de l’extérieur](assets/cnc-coffret-exterieur.webp)
 
+Le coffret est maintenant monté à côté de la machine. Le variateur de fréquence est placé dans la partie haute ; la partie basse regroupe les alimentations, les trois drivers d’axes et la carte de commande. Cette disposition garde les éléments accessibles pendant la mise au point.
+
+![Machine CNC et coffret de commande en cours d’intégration](assets/cnc-machine-et-coffret.jpg)
+
+![Détail du variateur, des alimentations et des drivers dans le coffret](assets/cnc-coffret-electrique.jpg)
+
 ## 1. Architecture de commande
 
 La carte 32 bits équipée d’un ESP32 exécute FluidNC. Elle interprète le G-code et produit, pour chaque axe, deux signaux principaux :
